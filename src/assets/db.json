@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Margaritta",
+    "toppings": [
+      {
+        "id": 1,
+        "name": "Peper"
+      },
+      {
+        "id": 2,
+        "name": "Jalapenio"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Farmerska",
+    "toppings": [
+      {
+        "id": 1,
+        "name": "Peper"
+      },
+      {
+        "id": 2,
+        "name": "Jalapenio"
+      },
+      {
+        "id": 3,
+        "name": "Sausage"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pizza Hut",
+    "toppings": [
+      {
+        "id": 1,
+        "name": "Peper"
+      },
+      {
+        "id": 2,
+        "name": "Jalapenio"
+      },
+      {
+        "id": 3,
+        "name": "Sausage"
+      }
+    ]
+  }
+]

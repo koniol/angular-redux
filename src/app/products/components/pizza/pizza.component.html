@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="pizza" *ngFor="let pizza of pizzas$ | async">
+    <p>Id: {{ pizza.id }}</p>
+    <p>Name: {{ pizza.name }}</p>
+    <a class="link" [routerLink]="[pizza.id]">Show</a>
+  </div>
+
+  <div *ngIf="(pizzas$ | async)?.loading"> Loading...</div>
+</div>
