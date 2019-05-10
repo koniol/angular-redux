@@ -33,8 +33,9 @@ export function reducer(state = initialState, action: fromPizzas.PizzasAction): 
       return {...state, loading: false, loaded: false};
     }
 
-    case fromPizzas.GET_PIZZA: {
-      return {...state, loading: false, loaded: false, entities: state[action.id]};
+    case fromPizzas.GET_SINGLE_PIZZA: {
+      console.log('GET SINGLE', state, action.id);
+      return {...state};
     }
   }
   return state;

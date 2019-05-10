@@ -4,7 +4,7 @@ import { Pizza } from '../../models/pizza.model';
 export const LOAD_PIZZAS = '[Products] Load Pizzas';
 export const LOAD_PIZZAS_FAIL = '[Products] Load Pizzas Fail';
 export const LOAD_PIZZAS_SUCCESS = '[Products] Load Pizzas Success';
-export const GET_PIZZA = '[Products] Get Pizza';
+export const GET_SINGLE_PIZZA = '[Products] Get Single Pizza';
 
 export class LoadPizzas implements Action {
   readonly type = LOAD_PIZZAS;
@@ -22,10 +22,10 @@ export class LoadPizzasSuccess implements Action {
   }
 }
 
-export class GetPizza implements Action {
-  readonly type = GET_PIZZA;
+export class GetSinglePizza implements Action {
+  readonly type = GET_SINGLE_PIZZA;
   constructor(public id: number) {
   }
 }
 
-export type PizzasAction = LoadPizzas | LoadPizzasFails | LoadPizzasSuccess | GetPizza ;
+export type PizzasAction = LoadPizzas | LoadPizzasFails | LoadPizzasSuccess | GetSinglePizza ;

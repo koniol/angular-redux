@@ -12,12 +12,12 @@ import { Pizza } from '../../models/pizza.model';
   styleUrls: ['./pizza-detail.component.css']
 })
 export class PizzaDetailComponent implements OnInit {
-  pizza$: Observable<Pizza>;
+  pizza$: any;
   constructor(private _store: Store<ProductState>) { }
 
   ngOnInit() {
-    console.log(this._store)
-    // this.pizza$ = this.store.select(fromStore.getAllPizzas);
+    // console.log(this._store)
+    this.pizza$ = this._store.select(fromStore.getPizzaState).subscribe(a => console.log(a));
   }
 
 }
