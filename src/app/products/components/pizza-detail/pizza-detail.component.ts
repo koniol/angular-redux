@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { ProductState } from '../../store/reducers';
 
 import * as fromStore from '../../store';
-import { Observable } from 'rxjs';
-import { Pizza } from '../../models/pizza.model';
+import { getSinglePizzaByRouter } from '../../store';
 
 @Component({
   selector: 'app-pizza-detail',
@@ -12,12 +11,12 @@ import { Pizza } from '../../models/pizza.model';
   styleUrls: ['./pizza-detail.component.css']
 })
 export class PizzaDetailComponent implements OnInit {
-  pizza$: any;
+  pizza$ = this._store.pipe(select(fromStore.getSinglePizza));
+
   constructor(private _store: Store<ProductState>) { }
 
   ngOnInit() {
-    // console.log(this._store)
-    this.pizza$ = this._store.select(fromStore.getPizzaState).subscribe(a => console.log(a));
+    this.pizza$ = this._store.pipe(select(getSinglePizzaByRouter));
   }
 
 }

@@ -1,3 +1,17 @@
-<p>
-  pizza-detail works!
-</p>
+  <p class="pizza">Id: {{ (pizza$ | async)?.id }}</p>
+  <p class="pizza">Name: {{ (pizza$ | async)?.name }}</p>
+  <p> Toppings:</p>
+    <ol type="a">
+      <li *ngFor="let topping of (pizza$ | async)?.toppings">
+        {{ topping.name }}
+      </li>
+      <li>
+        <ol type="a">
+          <li *ngFor="let topping of (pizza$ | async)?.toppings">
+            {{ topping.name }}
+          </li>
+        </ol>
+      </li>
+    </ol>
+
+

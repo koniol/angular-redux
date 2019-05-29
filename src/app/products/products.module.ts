@@ -10,12 +10,12 @@ import { PizzaDetailComponent } from './components/pizza-detail/pizza-detail.com
 
 const routes: Routes = [
   {
-    path: 'pizza/:id',
+    path: 'pizza/:pizzaId',
     component: PizzaDetailComponent
   },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: 'pizza',
     pathMatch: 'full'
   },
   {path: '**', component: PizzaComponent}
